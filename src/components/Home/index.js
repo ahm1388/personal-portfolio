@@ -33,7 +33,7 @@ const Home = () => {
                     <Link className="flat-button" to="/contact">CONTACT ME</Link>
                 </div>
             </div>
-            <Loader type="pacman" />
+            <Loader type="line-scale" />
         </>
     )
 }
