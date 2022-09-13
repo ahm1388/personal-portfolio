@@ -1,0 +1,70 @@
+.projects {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    color: white
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: row;
+
+
+    .project-card {
+        margin-left: 30px;
+        height: 500px;
+        width: 35%;
+        box-shadow: 0 4px 8px 0 #181818;
+        border-radius: 20px;
+        transition: 0.3s;
+    
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+
+    }
+
+    .project-card:hover {
+        box-shadow: 0 8px 16px 0 #ffd700;
+      }
+
+    .left-arrow {
+        margin-top: 17.5%;
+        margin-right: 20px;
+        font-size: 50px;
+    }
+
+    .left-arrow-inactive {
+        margin-top: 17.5%;
+        margin-right: 20px;
+        font-size: 50px;
+        color: gray;
+    }
+
+    .right-arrow {
+        margin-top: 17.5%;
+        margin-left: 50px;
+        vertical-align: middle;
+        font-size: 50px;
+    }
+
+    .right-arrow-inactive {
+        margin-top: 17.5%;
+        margin-left: 50px;
+        vertical-align: middle;
+        font-size: 50px;
+        color: gray;
+    }
+}
+
+.proj-img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
