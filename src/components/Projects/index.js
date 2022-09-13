@@ -4,14 +4,21 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import img_0 from '../../assets/images/0.png'
 import img_1 from '../../assets/images/1.png'
-import { faCircleLeft, faCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircleLeft, faCircleRight, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons'
 
 const Projects = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [projInd, setProjInd] = useState(0)
   const images = [img_0, img_1, img_0]
   const proj_names = ["Traveler Chronicles", "Travel Advisor", "Traveler Chronicles"]
+  const proj_desc = [
+    "Social media app where users can create accounts or log in through their Google account to share their travel adventures and like other peoples' experiences. Used React for the front end, NodeJS for the back end, and MongoDB to store the user and post information.",
+    "Used the Travel Advisor and Google APIs to create a web app that displays nearest restaurants, hotels, and attractions along with their ratings, contact information, and a link to their website. Also includes a search feature to look at locations from all around the world."
+  ]
+  const proj_links = [["https://www.travelerchronicles.net", "https://github.com/ahm1388/traveler-chronicles"], ["https://main.d1jru81u0oynz1.amplifyapp.com/","https://github.com/ahm1388/travel-advisor"], ["", ""]]
+  const proj_tech = [[["React", faReact, '#5ED4F4'], ["NodeJS", faNodeJs, '#3c873a'], ["MongoDB", faDatabase, '#fff']], [["React", faReact, '#5ED4F4']], ["React", faReact, '#5ED4F4']]
 
     useEffect(() => {
         setTimeout(() => {
@@ -43,18 +50,29 @@ const Projects = () => {
             <div className='project-card'>
               <img className='proj-img' src={images[projInd]} alt="traveler-chronicles" />
               <h1>{proj_names[projInd]}</h1>
-              <p>The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem 
-                        ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues 
-                        or desires to obtain pain of itself, because it is pain.”</p>
-              <h3>Technologies Used:</h3>
+              <p>{proj_desc[projInd]}</p>
+              <div className='technologies'>
+                <h3>Technologies:</h3>
+                {proj_tech[projInd].map((tech) => <FontAwesomeIcon className='tech-icon' title={tech[0]} icon={tech[1]} color={tech[2]} />)}
+              </div>
               <div className='proj-links'>
-                <button>Visit Site</button>
-                <button>Source Code</button>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd][0]}><button href="">Visit Site</button></a>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd][1]}><button>Source Code</button></a>
               </div>
             </div>
             <div className='project-card'>
               <img className='proj-img' src={images[projInd+1]} alt="traveler-chronicles" />
               <h1>{proj_names[projInd+1]}</h1>
+              <p>{proj_desc[projInd+1]}</p>
+              <div className='technologies'>
+                <h3>Technologies:</h3>
+                {proj_tech[projInd+1].map((tech) => <FontAwesomeIcon className='tech-icon' title={tech[0]} icon={tech[1]} color={tech[2]} />)}
+              </div>
+              <div className='proj-links'>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd][0]}><button href="">Visit Site</button></a>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd][1]}><button>Source Code</button></a>
+              </div>
+
             </div>
             {projInd === images.length-2 ?
             <FontAwesomeIcon className='right-arrow-inactive' icon={faCircleRight} />
