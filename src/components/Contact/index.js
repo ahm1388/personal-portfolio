@@ -45,10 +45,9 @@ const Contact = () => {
                             strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']} 
                             idx={15} />
                     </h1>
-                    <p>
-                        The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem 
-                        ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues 
-                        or desires to obtain pain of itself, because it is pain.”
+                    <p className='description'>
+                        I am currently pursuing an internship or full-time employment in web development. I look forward
+                        to connecting with you through LinkedIn or Email!
                     </p>
                     <div className='contact-form'>
                         <form ref={refForm} onSubmit={sendEmail}>

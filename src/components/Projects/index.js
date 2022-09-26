@@ -4,21 +4,23 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import img_0 from '../../assets/images/0.png'
 import img_1 from '../../assets/images/1.png'
+import img_4 from '../../assets/images/4.png'
 import { faCircleLeft, faCircleRight, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 
 const Projects = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [projInd, setProjInd] = useState(0)
-  const images = [img_0, img_1, img_0]
-  const proj_names = ["Traveler Chronicles", "Travel Advisor", "Traveler Chronicles"]
+  const images = [img_0, img_1, img_4]
+  const proj_names = ["Traveler Chronicles", "Travel Advisor", "Hand Gesture Recognition"]
   const proj_desc = [
     "Social media app where users can create accounts or log in through their Google account to share their travel adventures and like other peoples' experiences. Used React for the front end, NodeJS for the back end, and MongoDB to store the user and post information.",
-    "Used the Travel Advisor and Google APIs to create a web app that displays nearest restaurants, hotels, and attractions along with their ratings, contact information, and a link to their website. Also includes a search feature to look at locations from all around the world."
+    "Used the Travel Advisor and Google APIs to create a web app that displays nearest restaurants, hotels, and attractions along with their ratings, contact information, and a link to their website. Also includes a search feature to look at locations from all around the world.",
+    "Created a CNN model that was trained on approximately 10,000 images to be able to categorize pictures of hand gestures into 10 differnt types. Utilized popular data analysis and machine learning libraries in Python such as Numy, Pandas, and TensorFlow"
   ]
-  const proj_links = [["https://www.travelerchronicles.net", "https://github.com/ahm1388/traveler-chronicles"], ["https://main.d1jru81u0oynz1.amplifyapp.com/","https://github.com/ahm1388/travel-advisor"], ["", ""]]
-  const proj_tech = [[["React", faReact, '#5ED4F4'], ["NodeJS", faNodeJs, '#3c873a'], ["MongoDB", faDatabase, '#fff']], [["React", faReact, '#5ED4F4']], ["React", faReact, '#5ED4F4']]
+  const proj_links = [["https://www.travelerchronicles.net", "https://github.com/ahm1388/traveler-chronicles"], ["https://main.d1jru81u0oynz1.amplifyapp.com/","https://github.com/ahm1388/travel-advisor"], ["https://github.com/ahm1388/ML-Hand-Gesture-Recognition", "https://github.com/ahm1388/ML-Hand-Gesture-Recognition"]]
+  const proj_tech = [[["React", faReact, '#5ED4F4'], ["NodeJS", faNodeJs, '#3c873a'], ["MongoDB", faDatabase, '#fff']], [["React", faReact, '#5ED4F4']], [["Python", faPython, 'white']]]
 
     useEffect(() => {
         setTimeout(() => {
@@ -69,8 +71,8 @@ const Projects = () => {
                 {proj_tech[projInd+1].map((tech) => <FontAwesomeIcon className='tech-icon' title={tech[0]} icon={tech[1]} color={tech[2]} />)}
               </div>
               <div className='proj-links'>
-                <a target="_blank" rel="noreferrer" href={proj_links[projInd][0]}><button href="">Visit Site</button></a>
-                <a target="_blank" rel="noreferrer" href={proj_links[projInd][1]}><button>Source Code</button></a>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd+1][0]}><button href="">Visit Site</button></a>
+                <a target="_blank" rel="noreferrer" href={proj_links[projInd+1][1]}><button>Source Code</button></a>
               </div>
 
             </div>

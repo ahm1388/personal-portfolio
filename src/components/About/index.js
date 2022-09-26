@@ -2,7 +2,7 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faGitAlt, faHtml5, faJsSquare, faNode, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faGitAlt, faHtml5, faJsSquare, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 
 const About = () => {
@@ -26,19 +26,19 @@ const About = () => {
                         />
                     </h1>
                     <p>
-                        The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem 
-                        ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues 
-                        or desires to obtain pain of itself, because it is pain.”
+                        My name is Ahmed and I am currently pursuing a degree in Computer Science from McMaster University.
+                        During my studies, I developed a strong foundation in programming principles, algorithms and data 
+                        structures and databases. I learned how to create small applications in Java and Python, built machine
+                        learning models in Python, and created a full-stack website using HTML5, CSS, JavaScript, and PHP. 
                     </p>
                     <p>
-                        The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem 
-                        ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues 
-                        or desires to obtain pain of itself, because it is pain.”
+                        In addition to my degree requirements, I completed several web projects using the MERN stack to create
+                        full-stack website and utilize different APIs, in addition to completing the Machine Learning Nanodegree 
+                        from Udacity, which culminated in a CNN project that recognizes hand gestures in images.  
                     </p>
                     <p>
-                        The lorem ipsum gets its name from the Latin phrase Neque porro quisquam est qui dolorem 
-                        ipsum quia dolor sit amet. which translates to “Nor is there anyone who loves or pursues 
-                        or desires to obtain pain of itself, because it is pain.”
+                        In my free time, I enjoy reading books about history, sociology, and modern Western philosophy. I am also 
+                        a soccer fan who enjoys the occasional pickup game with friends and unfortunately supports Manchester United.
                     </p>
                 </div>
 
@@ -60,7 +60,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
                         </div>
                         <div className="face6">
-                            <FontAwesomeIcon icon={faNode} color="#3c873a" />
+                            <FontAwesomeIcon icon={faNodeJs} color="#3c873a" />
                         </div>
                     </div>
                 </div>
