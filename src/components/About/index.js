@@ -37,7 +37,7 @@ const About = () => {
                         from Udacity, which culminated in a CNN project that recognizes hand gestures in images.  
                     </p>
                     <p>
-                        In my free time, I enjoy reading books about history, sociology, and modern Western philosophy. I am also 
+                        In my free time, I enjoy reading books about history, sociology, and classical literature. I am also 
                         a soccer fan who enjoys the occasional pickup game with friends and unfortunately supports Manchester United.
                     </p>
                 </div>
