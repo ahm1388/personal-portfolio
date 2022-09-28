@@ -27,7 +27,7 @@ const Home = () => {
                         <span className={`${letterClass} _14`}>'m</span>
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
                     <br/>
-                    <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={21} />
+                    <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={18} />
                     </h1>
                     <h2>McMaster University, Computer Science</h2>
                     <Link className="flat-button" to="/contact">CONTACT ME</Link>
